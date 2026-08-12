@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webMethodsTestSuite description="Auto Generated from Template" name="TS_TestSuite.xml">
+    <webMethodsTestCase description="Generate a Test Wizard" name="TC_addInts">
+        <service folder="AASamplePkg11.services" name="addInts">
+            <input>
+                <file filename="resources/test/data/AASamplePkg11_services_addInts_input.xml"/>
+            </input>
+            <expected>
+                <file filename="resources/test/data/AASamplePkg11_services_addInts_output.xml"/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
+</webMethodsTestSuite>
