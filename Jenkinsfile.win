@@ -23,6 +23,9 @@ pipeline {
 
     stages {
         stage('Build'){
+			environment {
+                BUILD_PROPS_LOCATION = "${env.SAG_CI_HOME}/master_build_Reference"
+            }
             steps {
                 bat "${env.SAG_HOME}/common/lib/ant/bin/ant -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} build"
             }
@@ -35,7 +38,7 @@ pipeline {
  	stage('Test') {
             steps {
 		bat "${env.SAG_HOME}/common/lib/ant/bin/ant -DSAGHome=${env.SAG_HOME} -DSAG_CI_HOME=${env.SAG_CI_HOME} -DprojectName=${env.JOB_NAME} test"
-		junit 'report/'
+		junit 'report/**/*.xml'
             }
         }
     }
