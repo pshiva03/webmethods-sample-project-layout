@@ -61,6 +61,7 @@
           <value name="is_global">false</value>
         </record>
       </array>
+      <value name="rec_closed">false</value>
       <value name="modifiable">true</value>
     </record>
     <record name="sig_out" javaclass="com.wm.util.Values">
@@ -100,6 +101,7 @@
           <value name="is_global">false</value>
         </record>
       </array>
+      <value name="rec_closed">false</value>
       <value name="modifiable">true</value>
     </record>
   </record>
